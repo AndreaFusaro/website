@@ -1,7 +1,8 @@
 * {
   outline: none;
   font-family: Arial, Helvetica, sans-serif;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  box-sizing: border-box; }
 
 ::-webkit-scrollbar {
   display: none; }
@@ -100,7 +101,6 @@ header {
 
 .parallax {
   padding: 8vw 13vw;
-  margin: 10px 0;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -164,13 +164,12 @@ header {
 @media screen and (max-width: 800px) {
   header {
     flex-wrap: wrap;
-    margin: none; }
+    margin: none !important; }
   .bar {
-    padding: 20px;
-    max-width: 90%; }
-  .right > section {
-    margin-left: auto;
-    margin-right: 0; }
+    padding: 2vw;
+    max-width: 100%; }
+    .bar > section {
+      box-sizing: border-box; }
   .parallax {
     padding: 0;
     margin: none !important; } }
