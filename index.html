@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            * {
+                outline: none;
+                font-family: Arial, Helvetica, sans-serif;
+                scroll-behavior: smooth;
+            }
+
+            header {
+                display: grid;
+                grid-template-areas: 
+                    "  .  nav contattaci"
+                    "email  .   number";
+                grid-template-columns: 3fr auto 3fr;
+            }
+
+            .nav {
+                align-self: center;
+                grid-area: nav;
+            }
+
+            .email {
+                grid-area: email;
+                font-weight: 100;
+            }
+
+            .number {
+                grid-area: number;
+                margin-top: 4px;
+            }
+
+            .number, .email {
+                justify-self: center;
+                font-size: .8em;
+            }
+
+            .nav-btn {
+                cursor: pointer;
+                background-color: inherit;
+                padding: 0 5px;
+                border: none;
+                border-bottom: 2px solid white;
+            }
+
+            .nav-btn:hover {
+                border-color: rgb(15, 153, 26);
+            }
+
+            .contattaci {
+                grid-area: contattaci;
+                width: 100px;
+                justify-self: center;
+                background-color: rgb(166, 206, 106);
+                box-shadow: 0px 3px 7px -2px black;
+                border: none;
+                padding: 12px 12px;
+                font-weight: 100;
+                cursor: pointer;
+                transition: all .3s linear;
+            }
+
+            .contattaci:hover {
+                background-color: rgb(166, 206, 106, .7);
+            }
+
+            .card-title {
+                font-size: 10px;
+            }
+
+            /* -------header ends here------- */
+
+
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="nav">
+                <button class="nav-btn">Home</button>
+                <button class="nav-btn">Chi siamo</button>
+                <button class="nav-btn">Mission</button>
+                <button class="nav-btn">Vision</button>
+                <button class="nav-btn">Servizi offerti</button>
+                <button class="nav-btn">Orari e contatti</button>
+            </nav>
+            <button class="contattaci">Contattaci</button>
+            <span class="email">evergreenmultiservizi@gmail.com</span>
+            <span class="number">+39 3931712473</span>
+        </header>
+        <main>
+            <h1 style="text-align: center; padding-top: 30px">EVERGREEN MULTISERVIZI DI FUSARO ANDREA</h1>
+        </main>
+        <footer></footer>    
+    </body>
+</html>
