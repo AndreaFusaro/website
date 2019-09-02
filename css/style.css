@@ -10,12 +10,18 @@
 body {
   padding: 0 10px; }
 
+button {
+  cursor: pointer; }
+
 a {
   color: black;
   text-decoration: none !important;
   padding: none; }
   a:visited {
     color: black; }
+
+.green-text, .bar-title {
+  color: #03570a; }
 
 header {
   display: flex;
@@ -42,26 +48,12 @@ header {
     border-color: #0f991a;
     width: auto; }
 
-.contattaci {
-  grid-area: contattaci;
-  width: 100px;
-  justify-self: center;
-  background-color: #a6ce6a;
-  box-shadow: 0px 3px 7px -2px black;
-  border: none;
-  padding: 12px 12px;
-  font-weight: 100;
-  cursor: pointer;
-  transition: all .3s linear; }
-  .contattaci:hover {
-    background-color: rgba(166, 206, 106, 0.7); }
-
 .card-title {
   font-size: 10px; }
 
 #top-btn {
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   bottom: 10vh;
   right: 10vh;
   width: 60px;
@@ -92,8 +84,7 @@ header {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 500;
   font-size: 1.9em;
-  padding: 0 0 30px 0;
-  color: #03570a; }
+  padding: 0 0 30px 0; }
 
 .bar-content {
   width: 460px;
@@ -128,38 +119,108 @@ header {
   height: 40vw;
   padding: 20px 0 0 0; }
 
-.first-col {
-  grid-column: 1;
-  grid-row: 1; }
-
-.second-col {
-  grid-column: 2;
-  grid-row: 1; }
-
-.third-col {
-  grid-column: 3;
-  grid-row: 1; }
+.overlap {
+  overflow: hidden;
+  display: grid;
+  cursor: pointer; }
+  .overlap > * {
+    grid-column: 1;
+    grid-row: 1;
+    max-width: 100%;
+    max-height: 100%; }
+  .overlap:hover > .dettagli {
+    background-color: #396941; }
+    .overlap:hover > .dettagli > .dettagli-btn {
+      color: #396941;
+      background-color: white; }
+  .overlap:hover > .overlap-img {
+    transform: scale(1.2); }
 
 .overlap-img {
-  object-fit: none;
-  max-width: 100%;
+  object-fit: unset;
   height: 40vw;
-  flex-grow: 1;
-  overflow: hidden;
-  transition: .4s linear;
-  box-sizing: content-box; }
-  .overlap-img:hover {
-    transform: scale(1.2); }
+  transition: .4s linear; }
 
 .dettagli {
   color: white;
-  background-color: rgba(82, 156, 94, 0.589);
-  transition: all .3s linear;
+  background-color: rgba(57, 105, 65, 0.712);
   display: inline-flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   padding: 0;
-  color: black; }
-  .dettagli:hover {
-    background-color: #529c5e; }
+  z-index: 1;
+  height: 100%;
+  transition: all .5s linear;
+  font-size: 1.2em; }
+
+.dettagli-btn {
+  transition: all .5s linear;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  font-weight: bold;
+  padding: 10px 20px; }
+
+#contattaci {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; }
+  #contattaci > * {
+    padding: 20px 0; }
+
+#orari {
+  text-align: center;
+  display: inline-block;
+  background-color: rgba(212, 189, 169, 0.4); }
+
+#email-form {
+  display: grid;
+  grid-template-areas: "nome email" "oggetto oggetto" "telefono telefono" "indirizzo indirizzo" "messaggio messaggio" "invia invia";
+  grid-gap: 10px;
+  padding: 0 20px; }
+  #email-form > input,
+  #email-form > textarea {
+    border: 0;
+    border-bottom: solid 1px black;
+    padding: 2px; }
+    #email-form > input::placeholder,
+    #email-form > textarea::placeholder {
+      color: dimgray; }
+
+.nome {
+  grid-area: nome; }
+
+.email {
+  grid-area: email; }
+
+.oggetto {
+  grid-area: oggetto; }
+
+.telefono {
+  grid-area: telefono; }
+
+.indirizzo {
+  grid-area: indirizzo; }
+
+.messaggio {
+  grid-area: messaggio;
+  resize: none;
+  height: 120px; }
+
+.invia {
+  grid-area: invia;
+  border: 0;
+  padding: 2px;
+  cursor: pointer;
+  background-color: transparent; }
+  .invia > span {
+    border-bottom: 2px solid black; }
+
+sup {
+  font-size: .5em; }
 
 @media screen and (max-width: 800px) {
   header {
@@ -172,4 +233,28 @@ header {
       box-sizing: border-box; }
   .parallax {
     padding: 0;
-    margin: none !important; } }
+    margin: none !important; }
+  #servizi {
+    height: 120vh;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, 1fr);
+    padding: 20px 0 0 0; }
+  .overlap-img {
+    object-fit: cover;
+    width: 100%;
+    height: unset; }
+  #contattaci {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, minmax(0, 50%)); }
+  #orari {
+    padding: 10px 10px 20px; }
+  #email {
+    padding-top: 10px; }
+  #email-form {
+    padding: 20px 20px 10px;
+    min-width: auto;
+    grid-template-areas: "nome" "email" "oggetto" "telefono" "indirizzo" "messaggio" "invia";
+    box-shadow: 0px 3px 10px -4px black;
+    margin: 10px 0 40px 0; }
+    #email-form > * {
+      box-sizing: content-box; } }

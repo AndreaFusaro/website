@@ -77,28 +77,28 @@
                 </section>
             </div>
             <div id="servizi">
-                <section style="overflow: hidden" class="first-col">
+                <section class="overlap">
                     <img class="overlap-img" alt="giardinaggio" src="images/giardinaggio.jpg">
                     <div class="dettagli">
-                        hello
+                        Giardinaggio
                         <button class="dettagli-btn">
                             DETTAGLI
                         </button>
                     </div>
                 </section>
-                <section style="overflow: hidden" class="second-col">
+                <section class="overlap">
                     <img class="overlap-img" alt="pest-solution" src="images/pest-solution.jpg">
                     <div class="dettagli">
-                        hello
+                        Pest-Solution
                         <button class="dettagli-btn">
                             DETTAGLI
                         </button>
                     </div>
                 </section>
-                <section style="overflow: hidden" class="third-col">
+                <section class="overlap">
                     <img class="overlap-img" alt="pulizie" src="images/pulizie.jpg">
                     <div class="dettagli">
-                        hello
+                        Pulizie
                         <button class="dettagli-btn">
                             DETTAGLI
                         </button>
@@ -108,7 +108,35 @@
         </main>
         <footer>
             <aside id="contattaci">
-
+                <div id="orari">
+                    <h2 class="green-text">ORARI E CONTATTI</h2>
+                    Non esitare a contattarci per un preventivo e un sopralluogo 
+                    <br/>
+                    <u>GRATUITI</u>!
+                    <br/>
+                    <br/>
+                    Lunedì - Venerdì: 9<sup>00</sup> - 18<sup>00</sup>
+                    <br/>
+                    Sabato: 10<sup>00</sup> - 14<sup>00</sup>
+                    <br/>                    
+                    Chiusura: domenica e festivi
+                    <br/>
+                    <br/>
+                    <br/>
+                    evergreenmultiservizi@gmail.com
+                    <br/>
+                    <br/>                    
+                    +39 3931712473
+                </div>
+                <form id="email-form">
+                    <input type="text" class="nome" placeholder="Nome *" required pattern="^[-'a-zA-ZÀ-ÖØ-öø-ſ\s]+$">
+                    <input type="text" class="email" placeholder="Email *" required pattern='^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'>
+                    <input type="text" class="oggetto" placeholder="Oggetto">
+                    <input type="text" class="telefono" placeholder="Telefono" pattern="(?:(?:00|\+)?[0-9]{4})?(?:[ .-][0-9]{3}){1,5}">
+                    <input type="text" class="indirizzo" placeholder="Indirizzo">
+                    <textarea type="text" class="messaggio" placeholder="Messaggio" resize=false></textarea>
+                    <button class="invia">Invia</button>
+                </form>
             </aside>
             <p id="year" style="text-align: center; line-height: 30px">
                 by Evergreen Multiservizi
