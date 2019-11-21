@@ -59,7 +59,7 @@ header {
   width: 60px;
   height: 60px;
   border-radius: 60px;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   font-weight: 900;
@@ -68,7 +68,8 @@ header {
   color: black;
   cursor: pointer;
   animation: slideUp .2s linear;
-  box-shadow: 1px 3px 6px -2px black; }
+  box-shadow: 1px 3px 6px -2px black; 
+}
 
 @keyframes slideUp {
   0% {
@@ -178,7 +179,12 @@ header {
 
 #email-form {
   display: grid;
-  grid-template-areas: "nome email" "oggetto oggetto" "telefono telefono" "indirizzo indirizzo" "messaggio messaggio" "invia invia";
+  grid-template-areas: "nome email"
+ "oggetto oggetto"
+ "telefono telefono"
+ "indirizzo indirizzo"
+ "messaggio messaggio"
+ "invia invia";
   grid-gap: 10px;
   padding: 0 20px; }
   #email-form > input,
@@ -253,8 +259,18 @@ sup {
   #email-form {
     padding: 20px 20px 10px;
     min-width: auto;
-    grid-template-areas: "nome" "email" "oggetto" "telefono" "indirizzo" "messaggio" "invia";
+    grid-template-areas: "nome"
+ "email"
+ "oggetto"
+ "telefono"
+ "indirizzo"
+ "messaggio"
+ "invia";
     box-shadow: 0px 3px 10px -4px black;
     margin: 10px 0 40px 0; }
     #email-form > * {
-      box-sizing: content-box; } }
+      box-sizing: content-box; } 
+    #top-btn {
+        bottom: 3vh;
+        right: 3vh;
+    }}
