@@ -1,3 +1,3 @@
-#Website for Andrea Fusaro's company
+# Website for Andrea Fusaro's company
 
-To get access to the website visit www.AndreaFusaro.github.io/website
+> To get access to the website visit www.AndreaFusaro.github.io/website
