@@ -253,7 +253,8 @@ sup {
     grid-template-columns: 100%;
     grid-template-rows: repeat(2, minmax(0, 50%)); }
   #orari {
-    padding: 10px 10px 20px; }
+    padding: 10px 10px 20px;     
+    margin-bottom: 20px;}
   #email {
     padding-top: 10px; }
   #email-form {
